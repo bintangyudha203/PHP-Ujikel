@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Peminjaman;
 use Illuminate\Http\Request;
-use DB;
 
 class PeminjamanController extends Controller
 {
-	public function index()
+    public function index()
 	{
 		$data_peminjaman = \App\Peminjaman::all();
     	return view('peminjaman.index',['data_peminjaman'=> $data_peminjaman]);
